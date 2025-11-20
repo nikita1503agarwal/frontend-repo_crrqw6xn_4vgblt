@@ -3,6 +3,10 @@ import Hero from './components/Hero'
 import Projects from './components/Projects'
 import About from './components/About'
 import Contact from './components/Contact'
+import Showcase from './components/Showcase'
+import AnimeHero from './components/AnimeHero'
+import Marquee from './components/Marquee'
+import FooterCTA from './components/FooterCTA'
 
 function App() {
   return (
@@ -14,10 +18,14 @@ function App() {
 
       <Navbar />
       <main className="relative">
+        <AnimeHero />
+        <Marquee />
+        <Showcase />
         <Hero />
         <Projects />
         <About />
         <Contact />
+        <FooterCTA />
       </main>
 
       <footer className="relative border-t border-white/10">

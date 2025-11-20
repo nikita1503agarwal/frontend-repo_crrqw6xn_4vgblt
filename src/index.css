@@ -51,4 +51,36 @@
     background-size: 160px 160px;
     background-repeat: repeat;
   }
+
+  /* Orbit keyframes for ambient motion demos */
+  @keyframes orbit {
+    0% { transform: rotate(0deg) translateY(-96px) rotate(0deg); }
+    100% { transform: rotate(360deg) translateY(-96px) rotate(-360deg); }
+  }
+  @keyframes orbit-mid {
+    0% { transform: rotate(0deg) translateY(-72px) rotate(0deg); }
+    100% { transform: rotate(360deg) translateY(-72px) rotate(-360deg); }
+  }
+  @keyframes orbit-fast {
+    0% { transform: rotate(0deg) translateY(-56px) rotate(0deg); }
+    100% { transform: rotate(360deg) translateY(-56px) rotate(-360deg); }
+  }
+  .animate-orbit-slow {
+    animation: orbit 12s linear infinite;
+    transform-origin: center center;
+    left: 50%;
+    top: 50%;
+  }
+  .animate-orbit-mid {
+    animation: orbit-mid 9s linear infinite;
+    transform-origin: center center;
+    left: 50%;
+    top: 50%;
+  }
+  .animate-orbit-fast {
+    animation: orbit-fast 6s linear infinite;
+    transform-origin: center center;
+    left: 50%;
+    top: 50%;
+  }
 }
