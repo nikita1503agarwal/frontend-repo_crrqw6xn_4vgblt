@@ -1,21 +1,39 @@
 function Projects() {
   const items = [
     {
-      title: "Interactive 3D Landing",
-      desc: "A Spline-powered hero with smooth scroll and delightful details.",
-      tags: ["React", "Spline", "Tailwind"],
+      title: "Coco Coffee",
+      desc: "Premium ready-to-drink coffee naturally sweetened with pure honey. Healthy, delicious, and convenient.",
+      tags: ["FMCG", "Branding", "Go-To-Market"],
       link: "#",
     },
     {
-      title: "Realtime Dashboard",
-      desc: "Streaming metrics with framer-motion animations and charts.",
-      tags: ["FastAPI", "WebSockets", "Framer Motion"],
+      title: "Vetmedix",
+      desc: "A one-stop e-commerce platform for pet food, accessories, and verified veterinary-prescribed medicines.",
+      tags: ["E-commerce", "Pharma", "Logistics"],
       link: "#",
     },
     {
-      title: "Design System",
-      desc: "Accessible components with theming and tokens.",
-      tags: ["Design", "Accessibility", "Figma"],
+      title: "Bionex 4-4-4 Super Compost",
+      desc: "Scientifically balanced organic fertilizer that restores soil health and boosts crop yields.",
+      tags: ["Agritech", "Sustainability", "Soil"],
+      link: "#",
+    },
+    {
+      title: "Aqualanse",
+      desc: "IoT + software for real-time water quality monitoring with smart alerts and insights for fish farmers.",
+      tags: ["IoT", "Analytics", "Aquaculture"],
+      link: "#",
+    },
+    {
+      title: "Stock-X BD Ltd.",
+      desc: "University startup project. Led product development, operations, and strategy under UIHP.",
+      tags: ["Startup", "Leadership", "Strategy"],
+      link: "#",
+    },
+    {
+      title: "UI/UX & Web Projects",
+      desc: "Designing and building modern interfaces, motion-rich web experiences, and accessible systems.",
+      tags: ["UI/UX", "React", "Tailwind"],
       link: "#",
     },
   ];
@@ -24,8 +42,8 @@ function Projects() {
     <section id="projects" className="relative py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-6">
         <div className="mb-10">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">Selected Work</h2>
-          <p className="mt-2 text-blue-100/80">A few projects that showcase my range and craft.</p>
+          <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">Selected Work & Initiatives</h2>
+          <p className="mt-2 text-blue-100/80">A mix of startups, research, and design-led projects.</p>
         </div>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

@@ -16,14 +16,17 @@ function Hero() {
             Tech • Portfolio • Interactive • Modern
           </p>
           <h1 className="text-4xl sm:text-6xl font-bold tracking-tight text-white">
-            Hi, I’m <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">Your Name</span>
+            Hi, I’m <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">KH. Nayeam Ibna Nasir</span>
           </h1>
           <p className="mt-4 text-lg text-blue-100/90">
-            I design and build playful, high-performance web experiences with a focus on motion and craft.
+            Agritech-minded entrepreneur and UI/UX enthusiast. I build modern, interactive web experiences and lead tech-driven projects.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-3">
             <a href="#projects" className="inline-flex items-center rounded-lg bg-blue-600 px-4 py-2 text-white shadow-lg shadow-blue-600/30 hover:bg-blue-500">View Projects</a>
             <a href="#contact" className="inline-flex items-center rounded-lg border border-white/15 bg-white/5 px-4 py-2 text-white/90 hover:bg-white/10">Contact Me</a>
+          </div>
+          <div className="mt-6 text-sm text-blue-100/80">
+            <p>Dhaka, Bangladesh • +8801710651618 • khnayeam009@gmail.com</p>
           </div>
         </div>
       </div>

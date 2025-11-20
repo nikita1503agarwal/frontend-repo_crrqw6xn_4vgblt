@@ -17,7 +17,7 @@ function Navbar() {
           <div className="flex items-center justify-between px-4 py-3">
             <a href="#home" className="flex items-center gap-3 group">
               <img src="/flame-icon.svg" alt="Logo" className="h-8 w-8" />
-              <span className="text-white/90 font-semibold tracking-tight group-hover:text-white transition-colors">My Portfolio</span>
+              <span className="text-white/90 font-semibold tracking-tight group-hover:text-white transition-colors">KH. Nayeam Ibna Nasir</span>
             </a>
 
             <nav className="hidden md:flex items-center gap-6 text-sm">
