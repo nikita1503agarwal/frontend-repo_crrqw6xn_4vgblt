@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion'
+
 function Projects() {
   const items = [
     {
@@ -43,27 +45,31 @@ function Projects() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="mb-10">
           <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">Selected Work & Initiatives</h2>
-          <p className="mt-2 text-blue-100/80">A mix of startups, research, and design-led projects.</p>
+          <p className="mt-2 text-emerald-100/80">Premium, nature-forward brands and digital products with a handcrafted touch.</p>
         </div>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {items.map((item, i) => (
-            <a
+            <motion.a
               key={i}
               href={item.link}
               className="group rounded-2xl border border-white/10 bg-white/5 p-6 hover:bg-white/10 transition-colors"
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.5, delay: i * 0.06 }}
             >
               <div className="flex items-start justify-between gap-4">
                 <h3 className="text-white font-semibold tracking-tight">{item.title}</h3>
-                <span className="text-xs rounded-full bg-blue-600/20 text-blue-200 px-2 py-1">Case</span>
+                <span className="text-xs rounded-full bg-emerald-500/15 text-emerald-200 px-2 py-1">Case</span>
               </div>
-              <p className="mt-2 text-sm text-blue-100/80">{item.desc}</p>
+              <p className="mt-2 text-sm text-emerald-100/85">{item.desc}</p>
               <div className="mt-4 flex flex-wrap gap-2">
                 {item.tags.map((t) => (
-                  <span key={t} className="text-xs text-blue-100/80 bg-white/5 rounded px-2 py-1 border border-white/10">{t}</span>
+                  <span key={t} className="text-xs text-emerald-100/85 bg-white/5 rounded px-2 py-1 border border-white/10">{t}</span>
                 ))}
               </div>
-            </a>
+            </motion.a>
           ))}
         </div>
       </div>
