@@ -1,14 +1,24 @@
 import Spline from '@splinetool/react-spline';
+import { motion, useScroll, useTransform } from 'framer-motion'
+import { useRef } from 'react'
 
 function Hero() {
+  const ref = useRef(null)
+  const { scrollYProgress } = useScroll({ target: ref, offset: ['start start', 'end start'] })
+  const y = useTransform(scrollYProgress, [0, 1], [0, 120])
+  const opacity = useTransform(scrollYProgress, [0, 1], [1, 0.6])
+
   return (
-    <section id="home" className="relative min-h-[92vh] pt-28">
-      <div className="absolute inset-0">
+    <section id="home" className="relative min-h-[92vh] pt-28" ref={ref}>
+      {/* Parallax Spline layer */}
+      <motion.div className="absolute inset-0" style={{ y, opacity }}>
         <Spline scene="https://prod.spline.design/VJLoxp84lCdVfdZu/scene.splinecode" style={{ width: '100%', height: '100%' }} />
-      </div>
+      </motion.div>
 
       {/* Nature overlays for premium readability */}
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-emerald-950/80 via-emerald-950/20 to-emerald-950/80" />
+      {/* Fine paper texture overlay */}
+      <div className="pointer-events-none absolute inset-0 bg-grain opacity-[0.05] mix-blend-overlay" aria-hidden="true" />
 
       <div className="relative z-10 mx-auto max-w-7xl px-6">
         <div className="max-w-2xl py-20 sm:py-28">

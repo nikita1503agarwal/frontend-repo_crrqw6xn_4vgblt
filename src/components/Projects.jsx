@@ -42,6 +42,9 @@ function Projects() {
 
   return (
     <section id="projects" className="relative py-20 sm:py-28">
+      {/* Texture backdrop */}
+      <div className="pointer-events-none absolute inset-0 bg-grain opacity-[0.04] mix-blend-soft-light" aria-hidden="true" />
+
       <div className="mx-auto max-w-7xl px-6">
         <div className="mb-10">
           <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">Selected Work & Initiatives</h2>
@@ -53,11 +56,12 @@ function Projects() {
             <motion.a
               key={i}
               href={item.link}
-              className="group rounded-2xl border border-white/10 bg-white/5 p-6 hover:bg-white/10 transition-colors"
+              className="group rounded-2xl border border-white/10 bg-white/5 p-6 hover:bg-white/10 transition-colors will-change-transform"
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.5, delay: i * 0.06 }}
+              whileHover={{ y: -4 }}
             >
               <div className="flex items-start justify-between gap-4">
                 <h3 className="text-white font-semibold tracking-tight">{item.title}</h3>

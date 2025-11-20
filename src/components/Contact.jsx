@@ -18,6 +18,9 @@ function Contact() {
 
   return (
     <section id="contact" className="relative py-20 sm:py-28">
+      {/* Gentle texture */}
+      <div className="pointer-events-none absolute inset-0 bg-grain opacity-[0.035] mix-blend-soft-light" aria-hidden="true" />
+
       <div className="mx-auto max-w-3xl px-6">
         <div className="mb-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">Let’s connect</h2>
@@ -29,7 +32,7 @@ function Contact() {
           </div>
         </div>
 
-        <motion.form onSubmit={onSubmit} className="rounded-2xl border border-white/10 bg-white/5 p-6 grid gap-4" initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
+        <motion.form onSubmit={onSubmit} className="rounded-2xl border border-white/10 bg-white/5 p-6 grid gap-4 will-change-transform" initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }} whileHover={{ y: -2 }}>
           <div className="grid sm:grid-cols-2 gap-4">
             <div>
               <label className="block text-sm text-emerald-100/85 mb-1">Name</label>

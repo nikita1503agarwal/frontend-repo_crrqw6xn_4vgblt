@@ -1,8 +1,16 @@
-import { motion } from 'framer-motion'
+import { motion, useScroll, useTransform } from 'framer-motion'
+import { useRef } from 'react'
 
 function About() {
+  const ref = useRef(null)
+  const { scrollYProgress } = useScroll({ target: ref, offset: ['start end', 'end start'] })
+  const y = useTransform(scrollYProgress, [0, 1], [40, -20])
+
   return (
-    <section id="about" className="relative py-20 sm:py-28">
+    <section id="about" className="relative py-20 sm:py-28" ref={ref}>
+      {/* Soft paper texture */}
+      <div className="pointer-events-none absolute inset-0 bg-grain opacity-[0.035] mix-blend-soft-light" aria-hidden="true" />
+
       <div className="mx-auto max-w-5xl px-6 grid lg:grid-cols-2 gap-10 items-start">
         <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
           <h2 className="text-3xl font-bold text-white tracking-tight">About</h2>
@@ -17,7 +25,7 @@ function About() {
             <li className="rounded-xl border border-white/10 bg-white/5 px-3 py-2">Research & Product</li>
           </ul>
         </motion.div>
-        <motion.div className="rounded-2xl border border-white/10 bg-gradient-to-br from-emerald-500/10 to-amber-400/10 p-8 text-emerald-100/90" initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.1 }}>
+        <motion.div className="rounded-2xl border border-white/10 bg-gradient-to-br from-emerald-500/10 to-amber-400/10 p-8 text-emerald-100/90" initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.1 }} style={{ y }}>
           <div className="space-y-2 text-sm">
             <p>
               BSc (Hons) in Agriculture — Gopalganj Science and Technology University (2019–2025)

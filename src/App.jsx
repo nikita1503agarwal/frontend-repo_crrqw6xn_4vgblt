@@ -9,6 +9,8 @@ function App() {
     <div className="min-h-screen bg-emerald-950 text-emerald-50">
       {/* Nature-inspired radial background */}
       <div className="fixed inset-0 bg-[radial-gradient(1200px_600px_at_10%_-20%,rgba(16,185,129,0.18),transparent),radial-gradient(900px_500px_at_90%_-10%,rgba(245,158,11,0.12),transparent)]" />
+      {/* Subtle grain texture overlay */}
+      <div className="pointer-events-none fixed inset-0 bg-grain opacity-[0.06] mix-blend-soft-light" aria-hidden="true" />
 
       <Navbar />
       <main className="relative">
